@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <FrameLayout
+        android:id="@+id/frame_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/navigation"
+        android:animateLayoutChanges="true">
+
+
+<!--Este layout está relacionado com o ViewPage-->
+        <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#333639"
+            tools:context=".MainActivity">
+
+
+            <it.moondroid.coverflow.components.ui.containers.FeatureCoverFlow
+                android:id="@+id/coverFlow"
+
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:coverHeight="200dp"
+                app:coverWidth="150dp"
+                app:maxScaleFactor="1.5"
+                app:reflectionGap="0px"
+                app:rotationThreshold="0.5"
+                app:scalingThreshold="0.5"
+                app:spacing="0.6"/>
+
+            <TextSwitcher
+                android:id="@+id/mtitle"
+                android:paddingBottom="16dp"
+                android:layout_alignParentBottom="true"
+                android:layout_centerVertical="true"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+            </TextSwitcher>
+        </RelativeLayout>
+       <!--Aqui termina o layout do viewPage-->
+
+
+
+    </FrameLayout>
+
+
+    <!-- Configuração da view do bottomNavigation-->
+    <android.support.design.widget.BottomNavigationView
+        android:id="@+id/navigation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/cinza"
+        app:itemIconTint="@color/branco"
+        app:itemTextColor="@color/branco"
+        app:menu="@menu/bottom_navigation_itens"/>
+</RelativeLayout>

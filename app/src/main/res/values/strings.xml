@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">TipFlix</string>
+
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="item_2">Filme do dia</string>
+    <string name="item_3">Listas</string>
+    <string name="item_4">Categoria</string>
+    <string name="item_5">Buscar</string>
+    <string name="item_1">Início</string>
+</resources>
